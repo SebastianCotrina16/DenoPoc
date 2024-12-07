@@ -1,0 +1,31 @@
+# Node.js & npm (en caso de usar npx o npm para herramientas)
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# Deno
+deno.lock
+
+# Entorno local y archivos sensibles
+.env
+
+# Archivos de compilación y artefactos temporales
+dist/
+build/
+out/
+
+node_modules
+
+# Logs y datos temporales
+*.log
+*.tmp
+.DS_Store
+
+# Archivos de migraciones generados automáticamente (si no quieres incluirlos)
+drizzle/
+
+# Configuraciones locales del editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
