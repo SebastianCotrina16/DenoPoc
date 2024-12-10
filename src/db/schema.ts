@@ -9,7 +9,6 @@ import {
 import { sql } from "drizzle-orm";
 import { relations } from "drizzle-orm/relations";
 
-// Tabla de habitaciones (room)
 export const room = pgTable("room", {
 	id: text("id").primaryKey().notNull(),
 	roomNumber: text("room_number").notNull(),
@@ -21,7 +20,6 @@ export const room = pgTable("room", {
 	roomNumberKey: uniqueIndex("room_roomnumber_key").on(table.roomNumber),
 }));
 
-// Tabla de pagos (payment)
 export const payment = pgTable("payment", {
 	id: text("id").primaryKey().notNull(),
 	reservationId: text("reservation_id").notNull(),
@@ -38,7 +36,6 @@ export const payment = pgTable("payment", {
 		.onDelete("restrict"),
 }));
 
-// Tabla de invitados (guest)
 export const guest = pgTable("guest", {
 	id: text("id").primaryKey().notNull(),
 	name: text("name").notNull(),
@@ -46,7 +43,6 @@ export const guest = pgTable("guest", {
 	createdAt: timestamp("created_at", { precision: 3 }).default(sql`CURRENT_TIMESTAMP`).notNull(),
 });
 
-// Tabla de reservas (reservation)
 export const reservation = pgTable("reservation", {
 	id: text("id").primaryKey().notNull(),
 	guestId: text("guest_id").notNull(),
@@ -73,7 +69,6 @@ export const reservation = pgTable("reservation", {
 		.onDelete("restrict"),
 }));
 
-// Relaciones entre tablas
 export const paymentRelations = relations(payment, ({ one }) => ({
 	reservation: one(reservation, {
 		fields: [payment.reservationId],
