@@ -21,6 +21,12 @@ Without
 ```bash
 deno run -A ./path/to/file
 ```
+Hono:
+Running Hono
+```bash
+deno task start
+```
+
 Additional:
 
 - "-A" flag stands for `Allow all` and prevents Deno from prompting for permissions on every run\
