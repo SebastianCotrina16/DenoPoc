@@ -1,15 +1,15 @@
 # Database
 To pull the DB Schemas
 ```bash
-deno --env -A --node-modules-dir npm:drizzle-kit pull
+deno task db:pull
 ```
 To generate Schemas
 ```bash
-deno --env -A --node-modules-dir npm:drizzle-kit generate
+deno task db:generate
 ```
 and then migrate
 ```bash
-deno --env -A --node-modules-dir npm:drizzle-kit migrate
+deno task db:migrate
 ```
 
 # Running Files
