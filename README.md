@@ -1,5 +1,5 @@
 # Database
-To pull the DB Schemas
+To pull the DB Schemas (Only if you already have the tables on the db)
 ```bash
 deno task db:pull
 ```
