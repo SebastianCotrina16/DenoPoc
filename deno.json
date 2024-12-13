@@ -3,10 +3,12 @@
     "@types/pg": "npm:@types/pg@^8.11.10",
     "drizzle-kit": "npm:drizzle-kit@^0.29.1",
     "drizzle-orm": "npm:drizzle-orm@^0.37.0",
-    "hono": "jsr:@hono/hono@^4.6.13"
+    "hono": "jsr:@hono/hono@^4.6.13",
+    "pg": "npm:pg@^8.13.1",
+    "postgres": "npm:postgres@^3.4.5"
   },
   "tasks": {
-    "start": "deno run --allow-net main.ts",
+    "start": "deno run --env-file -A src/main.ts",
     "db:pull": "deno run -A --node-modules-dir npm:drizzle-kit pull",
     "db:generate": "deno run -A --node-modules-dir npm:drizzle-kit generate",
     "db:migrate": "deno run -A --node-modules-dir npm:drizzle-kit migrate"

@@ -7,7 +7,6 @@ const client = new Client({
     user: postgresConfig.user,
     password: postgresConfig.password,
     database: postgresConfig.database,
-    tls: postgresConfig.tls,
 });
 
 export default client;
